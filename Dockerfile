@@ -12,7 +12,6 @@ RUN npm run build
 
 RUN npm install -g serve
 
-EXPOSE 3000
+EXPOSE 5000
 
-# Command to run the application with serve
-CMD ["serve", "-s", "build", "-l", "3000", "-n", "5000", "0.0.0.0"]
+CMD ["serve", "-s", "build", "-l", "tcp://0.0.0.0:5000"]
